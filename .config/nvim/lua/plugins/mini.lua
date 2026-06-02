@@ -14,7 +14,6 @@ return {
     -- require('mini.sessions').setup({})
 
     require('mini.icons').setup({})
-    require('mini.tabline').setup({})
     require('mini.indentscope').setup({})
 
     -- ==============================================

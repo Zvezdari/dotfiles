@@ -55,3 +55,5 @@ km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Sho
 
 -- buffer
 km.set('n', '<leader>bd', '<Cmd>bd<CR>', { desc = "Close current buffer" })
+km.set('n', '<leader>bp', '<Cmd>bprevious<CR>', { desc = "Jump to prev buffer" })
+km.set('n', '<leader>bn', '<Cmd>bnext<CR>', { desc = "Jump to next buffer" })
