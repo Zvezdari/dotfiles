@@ -99,6 +99,7 @@ return {
             get_cwd = function (_)
               return vim.fn.getcwd()
             end,
+            show_hidden_files_by_default = true,
           },
         },
         snippets = {
