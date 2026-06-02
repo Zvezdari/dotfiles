@@ -16,6 +16,7 @@ return {
         options = {
           disabled_filetypes = { "snacks_dashboard" },
           icons_enabled = true,
+          component_separators = '',
         },
         sections = {
           lualine_b = {
@@ -38,6 +39,21 @@ return {
           },
           lualine_c = {
           },
+          lualine_x = {
+            "fileformat",
+          },
+          lualine_y = {
+            "searchcount",
+            "selectioncount",
+            "filetype",
+          },
+          lualine_z = {
+            "encoding",
+            {
+              "location",
+              padding = 0,
+            },
+          }
         },
       })
     end

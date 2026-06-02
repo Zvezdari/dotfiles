@@ -2,6 +2,8 @@ local km = vim.keymap
 
 -- -------normal mode---------
 km.set('n', '<leader>l', '<Cmd>Lazy<CR>', { desc = "Lazy" })
+km.set('n', ']<Space>', 'o<Esc>', { desc = "Add new line below" })
+km.set('n', '[<Space>', 'O<Esc>', { desc = "Add new line above" })
 km.set({'n', 'o', 'x'}, "L", "$")
 km.set({'n', 'o', 'x'}, "H", "^")
 km.set('n', 'j', "v:count ? 'j' : 'gj'", { expr = true }) -- 无数字前缀时，按屏幕行跳转，否则按逻辑行跳转
