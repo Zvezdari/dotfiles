@@ -38,16 +38,3 @@ au('BufWritePre', '*', clear_whitespace, 'Auto remove trailing whitespace on sav
 au('FileType', { 'dashboard' }, function ()
   vim.b.miniindentscope_disable = true
 end, 'Disable indentscope in special buffers')
-
-
--- 确保自定义高亮成功应用
-au('UIEnter', '*', function ()
-  vim.schedule(function ()
-    -- vim.cmd('highlight DropbarMenuNormalFloat blend=0')
-    -- vim.cmd('highlight MiniPickNormal blend=0')
-    vim.cmd([[
-      highlight clear MiniIndentscopeSymbol
-      highlight link MiniIndentscopeSymbol Function
-    ]])
-  end)
-end, 'Override dropbar highlight groups after UI fully loaded')

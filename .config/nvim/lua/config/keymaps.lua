@@ -53,9 +53,11 @@ km.set('n', '<leader>tn', '<Cmd>let v:hlsearch = 1 - v:hlsearch<CR>', { desc = "
 
 km.set('n', '<leader>fo', require('mini.files').open, { desc = "Explorer NeoTree" })
 km.set('n', '<leader>fr', '<Cmd>Pick oldfiles<CR>', { desc = "Pick recent files" })
+km.set('n', '<leader>ff', '<Cmd>Pick files<CR>', { desc = "Pick files" })
 km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Show history" })
 
 -- buffer
 km.set('n', '<leader>bd', '<Cmd>bd<CR>', { desc = "Close current buffer" })
 km.set('n', '<leader>bp', '<Cmd>bprevious<CR>', { desc = "Jump to prev buffer" })
 km.set('n', '<leader>bn', '<Cmd>bnext<CR>', { desc = "Jump to next buffer" })
+km.set('n', '<leader>bf', '<Cmd>Pick buffers<CR>', { desc = "Pick buffers" })
