@@ -1,0 +1,7 @@
+{
+  "require": {
+    "prefix": "req",
+    "body": ["require($1)"],
+    "desc": "Require module"
+  }
+}
