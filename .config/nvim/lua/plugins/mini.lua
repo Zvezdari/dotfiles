@@ -3,31 +3,42 @@ return {
   version = false,
 
   config = function()
-    require('mini.pairs').setup({})
+    -- Autopairs
+    require('mini.pairs').setup({
+      modes = { insert = true, command = true, terminal = false },
+    })
+    -- add gc textobject
     require('mini.comment').setup({})
-    require('mini.keymap').setup({})
+    -- split and join arguments
     require('mini.splitjoin').setup({})
+
+    -- trim all trailing whitespace and empty lines
     require('mini.trailspace').setup({})
-    vim.g.minitrailspace_disable = true
+    vim.g.minitrailspace_disable = true -- disable trailing highlight
+
     -- require('mini.diff').setup({})
     -- require('mini.git').setup({})
     -- require('mini.sessions').setup({})
 
-    require('mini.icons').setup({})
-    require('mini.indentscope').setup({})
+    -- 提供 icon 图标
+    require('mini.icons').setup({
+      lsp = {
+        text = { glyph = ' ' },
+      },
+    })
+    -- 增加缩进线绘制以及 ai,ii 文本块，[i 和 ]i 快捷键
+    require('mini.indentscope').setup({
+      draw = {
+        animation = function(next_step, total_stpes) return 5 end,  -- 绘制时间设置为 5 ms
+      }
+    })
 
     -- ==============================================
     -- mini.keymap
     -- ==============================================
-    local map_multistep = require('mini.keymap').map_multistep
+    require('mini.keymap').setup({})
     local map_combo = require('mini.keymap').map_combo
     local mode = { 'i', 'c', 'x', 's' }
-
-    map_multistep('i', '<Tab>',   { 'pmenu_next' })
-    map_multistep('i', '<S-Tab>', { 'pmenu_prev' })
-    map_multistep('i', '<CR>',    { 'pmenu_accept', 'minipairs_cr' })
-    map_multistep('i', '<BS>',    { 'minipairs_bs' })
-
     -- Support most common modes. This can also contain 't', but would
     -- only mean to press `<Esc>` inside terminal.
     map_combo(mode, 'jk', '<BS><BS><Esc>')
@@ -48,23 +59,19 @@ return {
       }
     })
 
-    -- ==============================================
-    -- mini.bracketed
-    -- ==============================================
+    -- use [ and ] to navigate
     require('mini.bracketed').setup({
       file = { suffix = '', options = {} },
       indent = { suffix = '', options = {} },
       treesitter = { suffix = '', options = {} },
       location = { suffix = '', options = {} },
       quickfix = { suffix = '', options = {} },
-      window = { suffix = '', options = {} },
       jump = { suffix = '', options = {} },
-      -- 保留buffer, comment, conflct, diagnostic, oldfile, undo, yank
+      buffer = { suffix = '', options = {} },
+      undo = { suffix = '', options = {} },
+      -- 保留 comment, conflct, diagnostic, oldfile, yank, window
     })
 
-    -- ==============================================
-    -- mini.files
-    -- ==============================================
     require('mini.files').setup({
       mappings = {
         close = 'q',

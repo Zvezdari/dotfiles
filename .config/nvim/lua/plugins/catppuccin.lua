@@ -16,7 +16,7 @@ return {
           mini = { enabled = true, indentscope_color = "lavender" },
           noice = true,
           nvim_surround = true,
-          snacks = { enabled = true, indent_scope_color = "lavender" },
+          snacks = { enabled = true, },
         },
       })
       vim.cmd.colorscheme("catppuccin")
@@ -49,6 +49,11 @@ return {
         callback = function()
           vim.cmd('highlight DropbarMenuNormalFloat blend=0')
           vim.cmd('highlight MiniPickNormal blend=0')
+          -- Dashboard 颜色设置
+          vim.api.nvim_set_hl(0, "SnacksDashboardHeader", {fg = "#e9edf8", bold = true,})
+          vim.api.nvim_set_hl(0, "SnacksDashboardIcon", {fg = "#8EB8F2", bold = true,})
+          vim.api.nvim_set_hl(0, "SnacksDashboardDesc", {fg = "#d7c6ff", bold = true,})
+          vim.api.nvim_set_hl(0, "SnacksDashboardKey", {fg = "#fe9550", bold = true,})
         end,
         desc = "Override Highlight group"
       })

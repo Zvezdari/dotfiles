@@ -76,23 +76,6 @@ return {
   config = function (_, opts)
     require("snacks").setup(opts)
 
-    -- Dashboard 颜色设置
-    vim.api.nvim_set_hl(0, "SnacksDashboardHeader", {
-      fg = "#e9edf8",
-      bold = true,
-    })
-    vim.api.nvim_set_hl(0, "SnacksDashboardIcon", {
-      fg = "#8EB8F2",
-      bold = true,
-    })
-    vim.api.nvim_set_hl(0, "SnacksDashboardDesc", {
-      fg = "#d7c6ff",
-      bold = true,
-    })
-    vim.api.nvim_set_hl(0, "SnacksDashboardKey", {
-      fg = "#fe9550",
-      bold = true,
-    })
 
   end
 }

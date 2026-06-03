@@ -32,6 +32,18 @@ return {
         config = {
           border = 'rounded',
         }
+      },
+      mappings = {
+        caret_left   = '<C-b>',
+        caret_right  = '<C-f>',
+
+        delete_char  = '<C-h>',
+        delete_char_right = '<C-d>',
+
+        scroll_down  = '<M-j>',
+        scroll_up    = '<M-k>',
+        scroll_left  = '<M-h>',
+        scroll_right = '<M-l>',
       }
     })
     require('mini.pick').registry.oldfiles = function()
