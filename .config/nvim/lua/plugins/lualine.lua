@@ -1,9 +1,10 @@
-local colors = {
-  activebg = "#dBa657",
-  activefg = "#1d1d1d",
-  inactivebg = "#7C6F64",
-  inactivefg = "#D4BE98",
-}
+local function get_theme_colors()
+  local current_theme = vim.g.theme or "catppuccin"
+  local theme_config = require("lua.plugins." .. current_theme)
+  return theme_config.colors or theme_config[1].colors or {}
+end
+
+local colors = get_theme_colors()
 
 
 return {

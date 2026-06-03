@@ -9,5 +9,11 @@ return {
     vim.g.gruvbox_material_enable_bold = 1
     vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
     vim.cmd.colorscheme("gruvbox-material")
-  end
+  end,
+  colors = {
+    activebg = "#dBa657",
+    activefg = "#1d1d1d",
+    inactivebg = "#7C6F64",
+    inactivefg = "#D4BE98",
+  }
 }
