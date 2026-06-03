@@ -1,3 +1,6 @@
+local user_vars = require("config.utils")
+vim.g.theme = user_vars.get_theme()
+
 require("config.lazy")
 require("config.keymaps")
 require("config.options")
