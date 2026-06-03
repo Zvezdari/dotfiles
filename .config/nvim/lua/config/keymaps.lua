@@ -52,10 +52,12 @@ km.set('n', '<leader>tl', '<Cmd>setlocal list!<CR>', { desc = "Toggle list" })
 km.set('n', '<leader>tt', '<Cmd>setlocal expandtab!<CR>', { desc = "Toggle expandtab" })
 km.set('n', '<leader>tn', '<Cmd>let v:hlsearch = 1 - v:hlsearch<CR>', { desc = "Toggle search highlight" })
 
-km.set('n', '<leader>fo', require('mini.files').open, { desc = "Explorer NeoTree" })
+km.set('n', '<leader>fo', require('mini.files').open,  { desc = "Explorer NeoTree" })
 km.set('n', '<leader>fr', '<Cmd>Pick oldfiles<CR>', { desc = "Pick recent files" })
 km.set('n', '<leader>ff', '<Cmd>Pick files<CR>', { desc = "Pick files" })
-km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Show history" })
+km.set('n', '<leader>fc', '<Cmd>Pick history<CR>', { desc = "Pick command history" })
+km.set('n', '<leader>fg', '<Cmd>Pick registers<CR>', { desc = "Pick registers" })
+km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Show notify history" })
 
 -- buffer
 km.set('n', '<leader>bd', '<Cmd>bd<CR>', { desc = "Close current buffer" })

@@ -19,6 +19,7 @@ return {
     -- require('mini.diff').setup({})
     -- require('mini.git').setup({})
     -- require('mini.sessions').setup({})
+    require('mini.extra').setup({})
 
     -- 提供 icon 图标
     require('mini.icons').setup({
