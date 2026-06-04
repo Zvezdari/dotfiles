@@ -4,6 +4,7 @@ end
 
 alias cfg "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias lcfg "lazygit -g ~/.cfg -w ~"
+alias ls "eza --icons --no-user --git-repos-no-status --header --color-scale=age"
 
 # 初始化 zoxide 并将 cd 作为 z 的别名，cdi 作为 zi(z interactive) 的别名
 zoxide init --cmd cd fish | source
