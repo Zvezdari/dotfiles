@@ -17,6 +17,7 @@ return {
           noice = true,
           nvim_surround = true,
           snacks = { enabled = true, },
+          flash = false,
         },
       })
       vim.cmd.colorscheme("catppuccin")
@@ -50,6 +51,7 @@ return {
           vim.cmd('highlight DropbarMenuNormalFloat blend=0')
           vim.cmd('highlight MiniPickNormal blend=0')
           vim.cmd('highlight MiniFilesNormal blend=0')
+          vim.cmd('highlight NormalFloat blend=0')
           -- Dashboard 颜色设置
           vim.api.nvim_set_hl(0, "SnacksDashboardHeader", {fg = "#e9edf8", bold = true,})
           vim.api.nvim_set_hl(0, "SnacksDashboardIcon", {fg = "#8EB8F2", bold = true,})
@@ -82,6 +84,11 @@ return {
 
           "FloatBorder",
           "FloatTitle",
+
+          "BlinkCmpDoc",
+          "BlinkCmpDocSeparator",
+
+          "NormalFloat",
         }
       })
     end,

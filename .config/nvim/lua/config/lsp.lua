@@ -1,5 +1,8 @@
+-- 要与 ~/.config/nvim/lsp/ 目录下的文件同名
+-- 每个lsp配置文件可以去 nvim-lspconfig 抄
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
+vim.lsp.enable 'jsonls'
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),

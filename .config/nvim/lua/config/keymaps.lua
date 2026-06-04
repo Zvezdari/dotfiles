@@ -3,6 +3,7 @@ local km = vim.keymap
 -- -------normal mode---------
 km.set('n', '<leader>l', '<Cmd>Lazy<CR>', { desc = "Lazy" })
 km.set('n', '<leader>w', '<Cmd>w<CR>', { desc = "Save" })
+km.set('n', '<leader>m', '<Cmd>Mason<CR>', { desc = "Mason Lsp" })
 km.set('n', ']<Space>', 'o<Esc>', { desc = "Add new line below" })
 km.set('n', '[<Space>', 'O<Esc>', { desc = "Add new line above" })
 km.set({'n', 'o', 'x'}, "L", "$")
