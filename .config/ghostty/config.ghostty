@@ -1,0 +1,20 @@
+# 更多shader样式 https://github.com/hackr-sh/ghostty-shaders
+custom-shader = "~/.config/ghostty/shaders/cursor.frag"
+
+# 可通过 `ghostty +list-themes` 预览主题
+theme = Catppuccin Mocha
+
+# 使用 fish 作为登录shell
+command = "fish"
+
+# 背景透明
+background-opacity = 0.6
+
+# 字体设置
+font-family = "Maple Mono NF CN"
+# font-style = Italic
+font-size = 12
+
+# 光标样式
+cursor-style = block
+shell-integration-features = no-cursor
