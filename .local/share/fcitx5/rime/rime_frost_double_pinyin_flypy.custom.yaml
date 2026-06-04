@@ -1,0 +1,10 @@
+patch:
+  switches/@0/reset: 1  # 默认输入法英文
+  switches/@2/reset: 0  # 默认输入法半角
+  switches/@4/reset: 0  # 默认禁用emoji
+  # schema/icon: # 中文模式图标
+  # schema/ascii_icon: # 英文模式图标
+  # 图标文件需放在用户文件夹
+
+  key_binder/select_first_character: "bracketleft"
+  key_binder/select_last_character: "bracketright"
