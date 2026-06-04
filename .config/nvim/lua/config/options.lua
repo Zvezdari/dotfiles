@@ -32,8 +32,6 @@ opt.smartcase = true  -- 搜索智能匹配
 opt.incsearch = true  -- 输入时实时高亮匹配
 opt.infercase = true  -- 智能补全大小写
 
--- opt.clipboard = 'unnamedplus' -- 所有操作都使用系统剪贴板
-
 opt.winborder = 'single' -- 浮动窗口border样式
 opt.winblend = 10 -- 浮动窗口半透明
 opt.pumblend = 10 -- 补全菜单半透明
@@ -49,6 +47,15 @@ opt.fillchars = 'eob: ' -- 隐藏文件末尾的~
 opt.shortmess:append('WcC') -- 隐藏写入确认，命令行完成信息等
 opt.splitkeep = 'screen'  -- 分割窗口时保持屏幕位置
 
+opt.listchars = {
+    tab = '> ',    -- 制表符显示为 "▸ "，后面跟一个空格
+    trail = '·',   -- 行尾多余的空格显示为 "·"
+    extends = '…', -- 当一行文字被截断时，在窗口右侧显示 "›"
+    precedes = '…', -- 当一行文字从左边开始被截断时，在窗口左侧显示 "‹"
+    nbsp = '␣',     -- 不间断空格显示为 "␣"
+    lead = '·',    -- 行首的连续空格显示为 "·"
+    eol = '$',
+}
 
 -- 根据文件类型加载对应的缩进规则和插件
 vim.cmd('filetype plugin indent on')
