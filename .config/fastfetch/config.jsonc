@@ -1,0 +1,121 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+    "type": "sixel",
+    "width": 25,
+		// "source": "arch",
+		"padding": {
+			"top": 2,
+			"left": 2,
+      "right": 2
+		}
+	},
+	"display": {
+		"separator": "  "
+	},
+	"modules": [
+		{
+			"type": "title",
+			"keyColor": "blue"
+		},
+		"break",
+		{
+			"type": "os",
+      "key": "OS",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "kernel",
+			"key": "├─  KER",
+			"format": "{1} {2}",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "packages",
+			"key": "├─  PAK",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "lm",
+			"key": "╰─󰧨  LMR",
+			"keyColor": "magenta"
+		},
+		// {
+		// 	"type": "theme",
+		// 	"key": "├─󰉼",
+		// 	"keyColor": "magenta"
+		// },
+		// {
+		// 	"type": "icons",
+		// 	"key": "╰─󰀻",
+		// 	"keyColor": "magenta"
+		// },
+		"break",
+		{
+			"type": "wm",
+			"key": "WM",
+			"keyColor": "green"
+		},
+		{
+			"type": "terminal",
+			"key": "├─  TER",
+			"keyColor": "green"
+		},
+		{
+			"type": "terminalfont",
+			"key": "├─  FON",
+			"keyColor": "green"
+		},
+		{
+			"type": "shell",
+			"key": "╰─  SHE",
+			"keyColor": "green"
+		},
+		"break",
+		{
+			"type": "host",
+			"key": "HO",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "cpu",
+			"key": "├─󰍛  CPU",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "gpu",
+			"key": "├─󰘚  GPU",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "display",
+			"key": "├─󰍹  MON",
+			"keyColor": "yellow"
+		},
+		// {
+		// 	"type": "wallpaper",
+		// 	"key": "╰─󰸉",
+		// 	"keyColor": "yellow"
+		// },
+		{
+			"type": "memory",
+			"key": "├─  MEM",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "disk",
+			"key": "├─  DIS",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "uptime",
+			"key": "╰─󰅐  TIM",
+			"keyColor": "yellow"
+		},
+		"break",
+		{
+			"type": "custom",
+			"format": "\u001b[1m\u001b[31m  \u001b[1m\u001b[32m  \u001b[1m\u001b[33m  \u001b[1m\u001b[34m  \u001b[1m\u001b[35m  \u001b[1m\u001b[36m  \u001b[1m\u001b[37m  \u001b[1m\u001b[30m "
+		}
+	]
+}

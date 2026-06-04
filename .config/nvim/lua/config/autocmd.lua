@@ -38,3 +38,8 @@ au('BufWritePre', '*', clear_whitespace, 'Auto remove trailing whitespace on sav
 au('FileType', { 'dashboard' }, function ()
   vim.b.miniindentscope_disable = true
 end, 'Disable indentscope in special buffers')
+
+-- 为jsonc文件设置注释类型
+au('FileType', { 'jsonc' }, function ()
+  vim.bo.commentstring = "// %s"
+end, 'Add commentstring to jsonc')
