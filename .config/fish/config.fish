@@ -4,7 +4,9 @@ end
 
 alias cfg "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias lcfg "lazygit -g ~/.cfg -w ~"
-alias ls "eza --icons --no-user --git-repos-no-status --header"
+alias ls "eza --icons --git-repos-no-status --header"
+alias cat "bat"
+alias ff "fastfetch"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -18,5 +20,8 @@ end
 # 初始化 zoxide 并将 cd 作为 z 的别名，cdi 作为 zi(z interactive) 的别名
 zoxide init --cmd cd fish | source
 starship init fish | source
+# batpipe 可以让 less 命令有高亮效果
+eval (batpipe)
+batman --export-env | source
 
 fish_config theme choose catppuccin-mocha --color-theme=dark
