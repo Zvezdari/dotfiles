@@ -7,6 +7,7 @@ alias lcfg "lazygit -g ~/.cfg -w ~"
 alias ls "eza --icons --git-repos-no-status --header"
 alias cat "bat"
 alias ff "fastfetch"
+alias mwin "sudo mount /dev/nvme0n1p1 ~/win-data -t ntfs-3g"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
