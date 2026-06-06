@@ -42,16 +42,28 @@
         thumb_style: (fg: "#81a1c1"),
     ),
     song_table_format: [
-        /*
-        (prop: (kind: Text("-"), style: (fg: "#81a1c1")),
-            width: "3",
-            label: "Rating",
-            alignment: Center,
-                label_prop: (kind: Group([
-                    (kind: Text("󰩳"), style: (fg: "#81a1c1")),
-                ]))
+        (prop: (kind: Transform(Replace(content: (kind: Sticker("rating")), replacements: [
+            (match:  "0", replace: (kind: Group([(kind: Text("󰎡"),style: (fg: "#81a1c1"))]))),
+            (match:  "1", replace: (kind: Group([(kind: Text("󰎤"),style: (fg: "#81a1c1"))]))),
+            (match:  "2", replace: (kind: Group([(kind: Text("󰎧"),style: (fg: "#81a1c1"))]))),
+            (match:  "3", replace: (kind: Group([(kind: Text("󰎪"),style: (fg: "#81a1c1"))]))),
+            (match:  "4", replace: (kind: Group([(kind: Text("󰎭"),style: (fg: "#81a1c1"))]))),
+            (match:  "5", replace: (kind: Group([(kind: Text("󰎱"),style: (fg: "#81a1c1"))]))),
+            (match:  "6", replace: (kind: Group([(kind: Text("󰎳"),style: (fg: "#81a1c1"))]))),
+            (match:  "7", replace: (kind: Group([(kind: Text("󰎶"),style: (fg: "#81a1c1"))]))),
+            (match:  "8", replace: (kind: Group([(kind: Text("󰎹"),style: (fg: "#81a1c1"))]))),
+            (match:  "9", replace: (kind: Group([(kind: Text("󰎼"),style: (fg: "#81a1c1"))]))),
+            (match: "10", replace: (kind: Group([(kind: Text("󰽽"),style: (fg: "#81a1c1"))]))),
+        ])), default: (kind: Text(""), style: (fg: "#4c566a"))),
+        width: "3",
+        label: "Rating",
+        alignment: Center,
+            label_prop: (kind: Group([
+                (kind: Text("󰩳"), style: (fg: "#81a1c1")),
+            ]))
         ),
-        (prop: (kind: Text("-"), style: (fg: "#81a1c1")),
+        (prop: (kind: Sticker("playCount"),style: (fg: "#81a1c1"),
+            default: (kind: Text(""), style: (fg: "#4c566a"))),
             width: "3",
             alignment: Left,
             label: "Playcount",
@@ -67,7 +79,6 @@
                 (kind: Text("│"), style: (fg: "#81a1c1")),
             ]))
         ),
-        */
         (prop: (kind: Property(Artist), style: (fg: "#81a1c1"),
             default: (kind: Text("Unknown Artist"), style: (fg: "#4c566a"))),
             width: "23%",
@@ -165,7 +176,19 @@
             (size: "5", borders: "ALL", border_symbols: Library("rounded_collapsed_top"),
                 border_title: [
                     (kind: Text("─"), style: (fg: "#81a1c1")),
-                    (kind: Text("─"), style: (fg: "#81a1c1")),
+                    (kind: Transform(Replace(content: (kind: Sticker("rating")), replacements: [
+                        (match:  "0", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("     "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "1", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text(" "),         style: (fg: "#88c0d0")), (kind: Text("    "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "2", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text(" "),         style: (fg: "#88c0d0")), (kind: Text("    "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "3", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("  "),       style: (fg: "#88c0d0")), (kind: Text("   "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "4", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("  "),       style: (fg: "#88c0d0")), (kind: Text("   "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "5", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("   "),     style: (fg: "#88c0d0")), (kind: Text("  "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "6", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("   "),     style: (fg: "#88c0d0")), (kind: Text("  "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "7", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("    "),   style: (fg: "#88c0d0")), (kind: Text(" "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "8", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("    "),   style: (fg: "#88c0d0")), (kind: Text(" "), style: (fg: "#81a1c1")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match:  "9", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("     "), style: (fg: "#88c0d0")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                        (match: "10", replace: (kind: Group([(kind: Text("["), style: (fg: "#81a1c1")), (kind: Text("     "), style: (fg: "#88c0d0")), (kind: Text("]"), style: (fg: "#81a1c1"))]))),
+                    ])), default: (kind: Text("─"),style: (fg: "#81a1c1"))),
                     (kind: Text("─"), style: (fg: "#81a1c1")),
                 ],
                 border_title_position: Bottom,
