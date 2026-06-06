@@ -2,15 +2,55 @@
 show_hidden = true
 ratio = [1, 2, 3]
 
-[[plugin.prepend_previewers]]
-url = "*/"
-run = 'piper -- eza  -a -TL=1 --color=always --icons=always --group-directories-first --no-quotes "$1"'
-[[plugin.prepend_previewers]]
-url = "*.tar*"
-run = 'piper --format=url -- tar tf "$1"'
-[[plugin.prepend_previewers]]
-url = "*.md"
-run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
-[[plugin.prepend_previewers]]
-url = "*.csv"
-run = 'piper -- bat -p --color=always "$1"'
+
+
+[plugin]
+  prepend_preloaders = [
+    # Replace magick, image, video with mediainfo
+    { mime = "{audio}/*", run = "mediainfo" },
+
+    # Hide metadata by default.
+    # Example for image mimetype:
+    { mime = "{image}/*", run = "mediainfo --no-metadata" },
+
+    # Hide image preview by default.
+    # Example for video mimetype:
+    { mime = "{video}/*", run = "mediainfo --no-preview" },
+
+    # NOTE: Use both --no-metadata and --no-preview will display nothing. :)
+    # Make sure both of your previewers and preloaders has the same arguments (--no-metadata and --no-preview)
+  ]
+
+  prepend_previewers = [
+    # Replace magick, image, video with mediainfo
+    { mime = "{audio}/*", run = "mediainfo"},
+
+    # Hide metadata by default.
+    # Example for image mimetype:
+    { mime = "{image}/*", run = "mediainfo --no-metadata" },
+
+    # Hide image preview by default.
+    # Example for video mimetype:
+    { mime = "{video}/*", run = "mediainfo --no-preview" },
+
+    # NOTE: Use both --no-metadata and --no-preview will display nothing. :)
+    # Make sure both of your previewers and preloaders has the same arguments (--no-metadata and --no-preview)
+
+
+    # below is piper.yazi configuration
+    { url = "*/", run = 'piper -- eza  -a -TL=1 --color=always --icons=always --group-directories-first --no-quotes "$1"'},
+    { url = "*.tar*", run = 'piper --format=url -- tar tf "$1"' },
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+    { url = "*.csv", run = 'piper -- bat -p --color=always "$1"' },
+  ]
+
+  # There are more extensions, mime types which are supported by mediainfo.
+  # Just add file's MIME type to `previewers`, `preloaders` above.
+  # https://mediaarea.net/en/MediaInfo/Support/Formats
+  # If it's not working, file an issue at https://github.com/boydaihungst/mediainfo.yazi/issues
+
+# For a large file like Adobe Illustrator, Adobe Photoshop, etc
+# you may need to increase the memory limit if no image is rendered.
+# https://yazi-rs.github.io/docs/configuration/yazi#tasks
+[tasks]
+  image_alloc      = 1073741824        # = 1024*1024*1024 = 1024MB
