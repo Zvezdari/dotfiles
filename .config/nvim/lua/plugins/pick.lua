@@ -67,5 +67,30 @@ return {
         }
       })
     end
+    require('mini.pick').registry.config = function ()
+      local path = vim.fn.stdpath('config')
+      local all_files = vim.fn.globpath(path, '**/*', true, true)
+      local files = {}
+      for _, file in ipairs(all_files) do
+        if file ~= '' and vim.fn.isdirectory(file) == 0 then
+          table.insert(files, file)
+        end
+      end
+      local items = vim.tbl_map(function (p)
+        return {
+          path = p,
+          text = telescope_shorten(p, 3)
+        }
+      end, files)
+      require('mini.pick').start({
+        source = {
+          items = items,
+          name = "config",
+          show = function (buf_id, show_items, query)
+            require('mini.pick').default_show(buf_id, show_items, query, { show_icons = true })
+          end
+        }
+      })
+    end
   end
 }

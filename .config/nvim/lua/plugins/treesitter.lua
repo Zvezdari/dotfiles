@@ -8,7 +8,8 @@ return {
       'c',
       'lua',
       'bash',
-      'json'
+      'json',
+      'ron'
     },
     sync_install = true,
     highlight = {
@@ -22,5 +23,15 @@ return {
         end
       end
     },
-  }
+  },
+  config = function(_, opts)
+
+    -- 修复 Ron 高亮
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'ron',
+      callback = function(args)
+        vim.treesitter.start(args.buf, 'ron')
+      end,
+    })
+  end,
 }
