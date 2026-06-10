@@ -62,15 +62,6 @@
                 (kind: Text("󰩳"), style: (fg: "#81a1c1")),
             ]))
         ),
-        (prop: (kind: Sticker("playCount"),style: (fg: "#81a1c1"),
-            default: (kind: Text(""), style: (fg: "#4c566a"))),
-            width: "3",
-            alignment: Left,
-            label: "Playcount",
-            label_prop: (kind: Group([
-                (kind: Text("󰆙"), style: (fg: "#81a1c1")),
-            ]))
-        ),
         (prop:(kind: Text("│"), style: (fg: "#81a1c1")),
             width: "1",
             alignment: Center,
@@ -121,14 +112,16 @@
     ]),
     browser_song_format: [
         (kind: Group([
+            (kind: Property(Title)),
+            (kind: Text(" - ")),
+            (kind: Property(Artist)),
+        ]), default: (kind: Property(Filename))),
+        /*
+        (kind: Group([
             (kind: Property(Track)),
             (kind: Text(" ")),
-        ])),
-        (kind: Group([
-            (kind: Property(Artist)),
-            (kind: Text(" - ")),
-            (kind: Property(Title)),
-        ]), default: (kind: Property(Filename)))
+        ]))
+        */
     ],
     level_styles: (
         info:  (fg: "#a3be8c", bg: "#2e3440"),
@@ -204,7 +197,7 @@
                 (size: "3", borders: "ALL", border_symbols: Rounded ,
                     border_title: [
                         (kind: Property(Status(Elapsed)),style: (fg: "#d8dee9")),
-                        (kind: Property(Status(StateV2(playing_label: "─󱦟─", paused_label: "  ", stopped_label: "  "))),
+                        (kind: Property(Status(StateV2(playing_label: "─󱦟─", paused_label: "  ", stopped_label: "  "))),
                             style: (fg: "#81a1c1", modifiers: "Bold")),
                         (kind: Property(Status(Duration)),style: (fg: "#d8dee9")),
                     ],
@@ -218,7 +211,7 @@
         "tab_bar_left": Split(direction: Horizontal, panes: [
             (size: "100%", pane: Pane(Property(content: [
                 (kind: Text(" "), style: (fg: "#81a1c1", modifiers: "Bold")),
-                (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))),
+                (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))),
                     style: (fg: "#d8dee9")),
                 (kind: Text("  "), style: (fg: "#81a1c1", modifiers: "Bold")),
                 (kind: Property(Song(FileExtension)), style: (fg: "#4c566a")),
