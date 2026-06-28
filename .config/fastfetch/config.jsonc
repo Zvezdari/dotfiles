@@ -16,7 +16,8 @@
 	"modules": [
 		{
 			"type": "title",
-			"keyColor": "blue"
+      "key": " ",
+			"keyColor": "cyan"
 		},
 		"break",
 		{

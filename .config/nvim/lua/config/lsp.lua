@@ -3,6 +3,7 @@
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
 vim.lsp.enable 'jsonls'
+vim.lsp.enable 'cssls'
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),

@@ -1,6 +1,3 @@
-local pick = require("mini.pick")
-local icons = require("mini.icons")
-
 local function telescope_shorten(path, shorten)
   shorten = shorten or 3
   path = path:gsub("\\", "/")
@@ -23,6 +20,33 @@ local function telescope_shorten(path, shorten)
   return table.concat(parts, "/")
 end
 
+-- Extract value from item chosen in specified picker
+local function extract_item_value(item)
+  -- for command picker
+  if type(item) == "string" then
+    return item
+  end
+
+  if type(item) == "table" then
+    -- for file-related picker
+    if item.path then
+      return item.path
+    end
+
+    -- for registers picker
+    if item.content then
+      return item.content
+    end
+
+    -- other pickers
+
+    -- fallback: return the string representation of the table to avoid nil
+    return vim.inspect(item)
+  end
+
+  return tostring(item)
+end
+
 return {
   'nvim-mini/mini.pick',
   version = false,
@@ -38,12 +62,25 @@ return {
         caret_right  = '<C-f>',
 
         delete_char  = '<C-h>',
-        delete_char_right = '<C-d>',
 
         scroll_down  = '<M-j>',
         scroll_up    = '<M-k>',
         scroll_left  = '<M-h>',
         scroll_right = '<M-l>',
+
+        copy_to_clipboard = {
+          char = '<M-c>',
+          func = function ()
+            local matches = MiniPick.get_picker_matches()
+            local item = matches and matches.current
+            if item then
+              local content = extract_item_value(item)
+              vim.fn.setreg('+', content)
+              vim.notify('Copied to system clipboard', vim.log.levels.INFO)
+              return true -- close picker after copied
+            end
+          end,
+        }
       }
     })
     require('mini.pick').registry.oldfiles = function()

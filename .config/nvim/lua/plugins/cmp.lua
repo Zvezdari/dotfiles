@@ -38,6 +38,13 @@ return {
 
     snippets = { preset = 'mini_snippets' },
 
+    enabled = function ()
+      local disabled_filetypes = { "markdown", "text" }
+      if vim.tbl_contains(disabled_filetypes, vim.bo.filetype) then
+        return false
+      end
+    end,
+
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
       -- Adjusts spacing to ensure icons are aligned
