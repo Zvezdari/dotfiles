@@ -1,0 +1,22 @@
+{
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip-format": "Quit",
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip-format": "Lock",
+    "on-click": "hyprlock"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip-format": "Reboot",
+    "on-click": "reboot"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "shutdown now"
+  }
+}

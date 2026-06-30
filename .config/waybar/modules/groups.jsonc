@@ -1,0 +1,90 @@
+{
+  "group/distro-group": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/distro",
+      "custom/terminal",
+      "custom/code",
+      "custom/obsidian",
+      "custom/office",
+      "custom/files",
+      "custom/spotify",
+      "custom/browser"
+    ]
+  },
+  "group/system": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/systeminfo",
+      "memory",
+      "cpu",
+      "temperature"
+    ]
+  },
+  "group/audio": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider",
+      "pulseaudio#microphone"
+    ]
+  },
+  "group/light": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "backlight",
+      "backlight/slider"
+    ]
+  },
+  "group/connections": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "network",
+      "bluetooth"
+    ]
+  },
+  "group/tray-group": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tray-arrow",
+      "tray"
+    ]
+  },
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  }
+}

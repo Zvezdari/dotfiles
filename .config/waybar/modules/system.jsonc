@@ -1,0 +1,40 @@
+{
+  "custom/systeminfo": {
+    "format": "",
+    "on-click": "exec ghostty -e btop"
+  },
+  "memory": {
+    "interval": 30,
+    "max-length": 10,
+    "tooltip-format": "{used:0.1f}G/{total:0.1f}G used",
+    "format": " ",
+    "format-alt": " <span size='11pt'>{}%</span>",
+    "states": {
+      "warning": 75,
+      "critical": 85
+    }
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " ",
+    "format-alt": " <span size='11pt'>{:0.1f}%</span>",
+    "max-length": 10,
+    "states": {
+      "warning": 75,
+      "critical": 90
+    }
+  },
+  "temperature": {
+    "interval": 10,
+    "thermal-zone": 8,
+    "critical-threshold": 80,
+    "format": "{icon}",
+    "format-alt": "{icon} <span size='11pt'>{temperatureC}°C</span>",
+    "format-critical": "<span size='12pt'>󱗗 </span><span size='11pt'>{temperatureC}°C</span>",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  }
+}

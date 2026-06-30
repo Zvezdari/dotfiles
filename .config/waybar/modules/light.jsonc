@@ -1,0 +1,14 @@
+{
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip-format": "{percent}%"
+    },
+    "backlight/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal",
+      "device": "intel_backlight"
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset": "󰋋",
+      "hands-free": "󰋋",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+    // "tooltip-format": "Output: {volume}%"
+  },
+  "pulseaudio#microphone": {
+    "format": "{volume}"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  }
+}
