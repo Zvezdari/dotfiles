@@ -32,7 +32,7 @@ opt.smartcase = true  -- 搜索智能匹配
 opt.incsearch = true  -- 输入时实时高亮匹配
 opt.infercase = true  -- 智能补全大小写
 
-opt.winborder = 'single' -- 浮动窗口border样式
+opt.winborder = 'rounded' -- 浮动窗口border样式
 opt.winblend = 10 -- 浮动窗口半透明
 opt.pumblend = 10 -- 补全菜单半透明
 opt.pumheight = 10 -- 补全菜单最大高度

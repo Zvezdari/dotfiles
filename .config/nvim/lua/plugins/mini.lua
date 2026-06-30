@@ -34,6 +34,16 @@ return {
       }
     })
 
+    -- Hightlight text with configurable patterns and highlight groups
+    -- mainly used for handling color-preview problem in @defrine-color in css file
+    require('mini.hipatterns').setup({
+      highlighters = {
+        todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo'  },
+
+        hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
+      }
+    })
+
     -- ==============================================
     -- mini.keymap
     -- ==============================================
