@@ -67,8 +67,6 @@ return {
         { pane = 2, icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
         { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
         { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
-        -- 设置脚本缓存时间为100年，模拟永久缓存，解决执行脚本后以插入模式进入dashboard的问题
-        { pane = 2, section = "terminal", cmd = "bash ~/.local/bin/colorscript.sh", height = 5, padding = 1, ttl = 100*365*24*3600 },
         { pane = 1, section = "startup" },
       }
     }

@@ -40,9 +40,7 @@ return {
 
     enabled = function ()
       local disabled_filetypes = { "markdown", "text" }
-      if vim.tbl_contains(disabled_filetypes, vim.bo.filetype) then
-        return false
-      end
+      return not vim.tbl_contains(disabled_filetypes, vim.bo.filetype)
     end,
 
     appearance = {
