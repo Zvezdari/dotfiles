@@ -2,7 +2,6 @@ local km = vim.keymap
 
 -- -------normal mode---------
 km.set('n', '<leader>l', '<Cmd>Lazy<CR>', { desc = "Lazy" })
-km.set('n', '<leader>w', '<Cmd>w<CR>', { desc = "Save" })
 km.set('n', '<leader>m', '<Cmd>Mason<CR>', { desc = "Mason Lsp" })
 km.set('n', ']<Space>', 'o<Esc>', { desc = "Add new line below" })
 km.set('n', '[<Space>', 'O<Esc>', { desc = "Add new line above" })
@@ -59,6 +58,7 @@ km.set('n', '<leader>ff', '<Cmd>Pick files<CR>', { desc = "Pick files" })
 km.set('n', '<leader>fc', '<Cmd>Pick history<CR>', { desc = "Pick command history" })
 km.set('n', '<leader>fg', '<Cmd>Pick registers<CR>', { desc = "Pick registers" })
 km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Show notify history" })
+km.set('n', '<leader>fd', require('snacks.dashboard').open, { desc = "Show dashboard" })
 
 -- buffer
 km.set('n', '<leader>bd', '<Cmd>bd<CR>', { desc = "Close current buffer" })
