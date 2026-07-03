@@ -80,7 +80,32 @@ return {
               return true -- close picker after copied
             end
           end,
-        }
+        },
+
+        split_open = {
+          char = '<C-o>',
+          func = function ()
+            local selected = MiniPick.get_picker_matches()
+            local item = selected and selected.current
+            if item then
+              local content = extract_item_value(item)
+              vim.cmd('split' .. content)
+              return true -- close picker after copied
+            end
+          end
+        },
+        vsplit_open = {
+          char = '<M-o>',
+          func = function ()
+            local selected = MiniPick.get_picker_matches()
+            local item = selected and selected.current
+            if item then
+              local content = extract_item_value(item)
+              vim.cmd('vsplit' .. content)
+              return true -- close picker after copied
+            end
+          end
+        },
       }
     })
     require('mini.pick').registry.oldfiles = function()

@@ -65,3 +65,58 @@ km.set('n', '<leader>bd', '<Cmd>bd<CR>', { desc = "Close current buffer" })
 km.set('n', '<leader>bp', '<Cmd>bprevious<CR>', { desc = "Jump to prev buffer" })
 km.set('n', '<leader>bn', '<Cmd>bnext<CR>', { desc = "Jump to next buffer" })
 km.set('n', '<leader>bf', '<Cmd>Pick buffers<CR>', { desc = "Pick buffers" })
+
+
+--------------------------------------------------
+-- Custom Kyemappings for Complicated Fucntions
+--------------------------------------------------
+
+-- open url
+-- km.set('v', 'gx', function ()
+--   vim.cmd('normal! "vy')
+--   local selected = vim.fn.getreg('v')
+--   selected = vim.trim(selected)
+--
+--   if selected == '' then
+--     vim.notify('No text selected', vim.log.levels.WARN)
+--     return
+--   end
+--
+--   local patterns = {
+--     'https?://[%w%-%.]+%.[%w]+[^%s<>"{}|\\\\^`%[%]]*',  -- http/https
+--     'ftp://[%w%-%.]+%.[%w]+[^%s<>"{}|\\\\^`%[%]]*',     -- ftp
+--     'file://[^%s<>"{}|\\\\^`%[%]]+',                    -- file
+--     'www%.[%w%-%.]+%.[%w]+[^%s<>"{}|\\\\^`%[%]]*',     -- www. 开头
+--     '[%w%-%.]+%.[%w]+/[^%s<>"{}|\\\\^`%[%]]*',         -- domain.com/path
+--   }
+--
+--   local url = nil
+--   for _, pattern in ipairs(patterns) do
+--     local matched = string.match(selected, '^' .. pattern .. '$')
+--     if matched then
+--       url = matched
+--       break
+--     end
+--     local extracted = string.match(selected, pattern)
+--     if extracted then
+--       url = extracted
+--       break
+--     end
+--   end
+--
+--   if not url then
+--     if string.match(selected, '[%w%-%.]+/[%w%-%.%_]+') then
+--       url = 'https://github.com/' .. selected
+--     end
+--   end
+--
+--   if url then
+--     -- 如果 URL 没有协议，补上 https://
+--     if not string.match(url, '^https?://') and not string.match(url, '^ftp://') and not string.match(url, '^file://') then
+--       url = 'https://' .. url
+--     end
+--     vim.ui.open(url)
+--   else
+--     vim.notify('Selected text is not a valid URL: ' .. selected, vim.log.levels.WARN)
+--   end
+-- end, { desc = 'Open selected URL' })
