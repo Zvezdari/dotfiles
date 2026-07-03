@@ -1,0 +1,6 @@
+@import "colors.css";
+
+tooltip {
+  border-radius: 10px;
+  border: 2px solid @outline;
+}

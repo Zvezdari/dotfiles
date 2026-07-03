@@ -50,7 +50,7 @@
 
 #power-profiles-daemon,
 #idle_inhibitor {
-  margin: 4px 5px;
+  margin: 4px 0px;
   padding: 6px 15px 6px 10px;
   background-color: @surface_container;
   border-radius: 20px;
@@ -62,9 +62,8 @@
 #light,
 #connections,
 #system,
-#power,
-#storage {
-  margin: 4px 5px;
+#power {
+  margin: 4px 2px;
   padding: 6px 6px;
   background-color: @surface_container;
   border-radius: 20px;
