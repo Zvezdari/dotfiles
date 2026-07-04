@@ -20,11 +20,13 @@
     "./modules/clock.jsonc",
     "./modules/light.jsonc",
     "./modules/tray-notif.jsonc",
-    "./modules/power.jsonc"
+    "./modules/power.jsonc",
+    "./modules/cava.jsonc"
   ],
   "modules-left": [
     "group/distro-group",
-    "group/system"
+    "group/system",
+    "cava"
   ],
   "modules-center": [
     "power-profiles-daemon",
