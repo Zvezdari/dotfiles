@@ -37,7 +37,7 @@ ratio = [1, 2, 3]
     # Make sure both of your previewers and preloaders has the same arguments (--no-metadata and --no-preview)
 
 
-    # below is piper.yazi configuration
+    # The followings is piper.yazi configuration
     { url = "*/", run = 'piper -- eza  -a -TL=1 --color=always --icons=always --group-directories-first --no-quotes "$1"'},
     { url = "*.tar*", run = 'piper --format=url -- tar tf "$1"' },
     { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },

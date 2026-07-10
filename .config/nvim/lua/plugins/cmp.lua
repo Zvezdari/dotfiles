@@ -25,6 +25,8 @@ return {
   -- use a release tag to download pre-built binaries
   version = '1.*',
 
+  dependencies = { 'xzbdmw/colorful-menu.nvim', opts = {} },
+
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
@@ -85,6 +87,14 @@ return {
               highlight = function (ctx)
                 local _, hl = get_mini_icon(ctx)
                 return hl
+              end,
+            },
+            label = {
+              text = function(ctx)
+                return require("colorful-menu").blink_components_text(ctx)
+              end,
+              highlight = function(ctx)
+                return require("colorful-menu").blink_components_highlight(ctx)
               end,
             }
           },

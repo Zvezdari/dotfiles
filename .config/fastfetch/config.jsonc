@@ -76,17 +76,20 @@
 		{
 			"type": "host",
 			"key": "HO",
-			"keyColor": "yellow"
+			"keyColor": "yellow",
+      "format": "{name}"
 		},
 		{
 			"type": "cpu",
 			"key": "├─󰍛  CPU",
-			"keyColor": "yellow"
+			"keyColor": "yellow",
+      "format": "{name}"
 		},
 		{
 			"type": "gpu",
 			"key": "├─󰘚  GPU",
-			"keyColor": "yellow"
+			"keyColor": "yellow",
+      "format": "{name}"
 		},
 		{
 			"type": "display",

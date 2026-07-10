@@ -1,7 +1,8 @@
 {
   "custom/distro": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "fuzzel"
   },
   "custom/terminal": {
     "format": "󰊠",

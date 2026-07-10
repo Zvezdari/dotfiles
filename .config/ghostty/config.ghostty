@@ -8,7 +8,7 @@ theme = Catppuccin Mocha
 command = "fish"
 
 # 背景透明
-background-opacity = 1
+background-opacity = 0.5
 
 # 字体设置
 font-family = "Maple Mono NF CN"

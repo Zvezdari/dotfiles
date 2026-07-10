@@ -14,6 +14,7 @@
 	"monstercat": true,
 	"noise_reduction": 0.03,
 	"input_delay": 1,
-	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+  "on-click": "exec ghostty -e rmpc"
 }
 }

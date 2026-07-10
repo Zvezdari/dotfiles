@@ -30,16 +30,16 @@ $line_break$character"""
 palette = 'colors'
 
 [palettes.colors]
-color1 = '#a5c8ff'
-color2 = '#00315e'
-color3 = '#c2c6d2'
-color4 = '#1b2028'
-color5 = '#bdc5eb'
-color6 = '#262f4d'
-color7 = '#c5c1f9'
-color8 = '#2d2b59'
-color9 = '#3d4565'
-color10 = '#444171'
+color1 = '{{colors.primary_fixed_dim.default.hex}}'
+color2 = '{{colors.on_primary.default.hex}}'
+color3 = '{{colors.on_surface_variant.default.hex}}'
+color4 = '{{colors.surface_container.default.hex}}'
+color5 = '{{colors.secondary.default.hex}}'
+color6 = '{{colors.on_secondary.default.hex}}'
+color7 = '{{colors.tertiary.default.hex}}'
+color8 = '{{colors.on_tertiary.default.hex}}'
+color9 = '{{colors.secondary_container.default.hex}}'
+color10 = '{{colors.tertiary_container.default.hex}}'
 
 [os]
 disabled = false
