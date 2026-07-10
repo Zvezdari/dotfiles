@@ -68,11 +68,11 @@ sep_left  = { open = "🭁", close = "🭠" }
 sep_right = { open = "🭁", close = "🭠" }
 
 # Permissions
-perm_type  = { fg = "#485ec7" }
-perm_write = { fg = "#4336ec" }
-perm_read  = { fg = "#ff2b12" }
-perm_exec  = { fg = "#5d46ff" }
-perm_sep   = { fg = "#3b7fff" }
+perm_type  = { fg = "#6f80d3" }
+perm_write = { fg = "#6e64f0" }
+perm_read  = { fg = "#ff5945" }
+perm_exec  = { fg = "#8a79ff" }
+perm_sep   = { fg = "#6ea1ff" }
 
 # Progress
 progress_label  = { bold = true }
@@ -173,6 +173,8 @@ rules = [
     # Special files
     { url = "*", is = "orphan", bg = "#93000a" },
     { url = "*", is = "exec", fg = "#ffdad6" },
+
+    { url = "*/", is = "hidden", fg = "#bdc5eb" },
 
     # Fallback
     { url = "*", fg = "#dee2ef" },

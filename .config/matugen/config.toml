@@ -21,3 +21,7 @@ post_hook = 'pkill -SIGUSR2 waybar'
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.yatline]
+input_path = '~/.config/matugen/templates/yatline-theme.lua'
+output_path = '~/.config/yazi/init.lua'
