@@ -5,6 +5,10 @@ input_path = '~/.config/matugen/templates/cava-colors.ini'
 output_path = '~/.config/cava/themes/matugen'
 post_hook = 'pgrep -x cava && pkill -USR1 cava'
 
+[templates.eza]
+input_path = '~/.config/matugen/templates/theme.yml'
+output_path = '~/.config/eza/theme.yml'
+
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/colors.lua'

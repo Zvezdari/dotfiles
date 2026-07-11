@@ -1,0 +1,102 @@
+colourful: true
+
+filekinds:
+  normal: {foreground: "{{colors.on_surface.default.hex}}"}
+  directory: {foreground: "{{colors.primary.default.hex}}"}
+  symlink: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+  pipe: {foreground: "{{colors.inverse_on_surface.default.hex }}"}
+  block_device: {foreground: "{{colors.on_primary.default.hex }}"}
+  char_device: {foreground: "{{colors.on_primary.default.hex }}"}
+  socket: {foreground: "{{colors.secondary.default.hex }}"}
+  special: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  executable: {foreground: "{{colors.on_error_container.default.hex}}"}
+  mount_point: {foreground: "{{colors.inverse_surface.default.hex }}"}
+
+perms:
+  user_read: {foreground: "{{colors.tertiary.default.hex }}"}
+  user_write: {foreground: "{{colors.error.default.hex }}"}
+  user_execute_file: {foreground: "{{colors.on_error_container.default.hex}}"}
+  user_execute_other: {foreground: "{{colors.on_error_container.default.hex}}"}
+  group_read: {foreground: "{{colors.tertiary.default.hex }}"}
+  group_write: {foreground: "{{colors.error.default.hex }}"}
+  group_execute: {foreground: "{{colors.on_error_container.default.hex}}"}
+  other_read: {foreground: "{{colors.tertiary.default.hex }}"}
+  other_write: {foreground: "{{colors.error.default.hex }}"}
+  other_execute: {foreground: "{{colors.on_error_container.default.hex}}"}
+  special_user_file: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  special_other: {foreground: "{{colors.secondary.default.hex }}"}
+  attribute: {foreground: "{{colors.outline.default.hex }}"}
+
+size:
+  major: {foreground: "{{colors.outline.default.hex }}"}
+  minor: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+  number_byte: {foreground: "{{colors.tertiary.default.hex }}"}
+  number_kilo: {foreground: "{{colors.on_surface.default.hex}}"}
+  number_mega: {foreground: "{{colors.primary.default.hex}}"}
+  number_giga: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  number_huge: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  unit_byte: {foreground: "{{colors.outline.default.hex }}"}
+  unit_kilo: {foreground: "{{colors.primary.default.hex}}"}
+  unit_mega: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  unit_giga: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  unit_huge: {foreground: "{{colors.inverse_surface.default.hex }}"}
+
+users:
+  user_you: {foreground: "{{colors.tertiary.default.hex }}"}
+  user_root: {foreground: "{{colors.tertiary.default.hex }}"}
+  user_other: {foreground: "{{colors.tertiary.default.hex }}"}
+  group_yours: {foreground: "{{colors.on_surface.default.hex}}"}
+  group_other: {foreground: "{{colors.on_surface.default.hex}}"}
+  group_root: {foreground: "{{colors.on_surface.default.hex}}"}
+
+links:
+  normal: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+  multi_link_file: {foreground: "{{colors.inverse_surface.default.hex }}"}
+
+git:
+  new: {foreground: "{{colors.on_error_container.default.hex}}"}
+  modified: {foreground: "{{colors.error.default.hex }}"}
+  deleted: {foreground: "{{colors.primary_container.default.hex }}"}
+  renamed: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+  typechange: {foreground: "{{colors.secondary_container.default.hex }}"}
+  ignored: {foreground: "{{colors.inverse_on_surface.default.hex }}"}
+  conflicted: {foreground: "{{colors.on_primary.default.hex }}"}
+
+git_repo:
+  branch_main: {foreground: "{{colors.tertiary.default.hex }}"}
+  branch_other: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  git_clean: {foreground: "{{colors.on_error_container.default.hex}}"}
+  git_dirty: {foreground: "{{colors.primary_container.default.hex }}"}
+
+security_context:
+  colon: {foreground: "{{colors.inverse_on_surface.default.hex }}"}
+  user: {foreground: "{{colors.on_surface.default.hex}}"}
+  role: {foreground: "{{colors.primary_fixed.default.hex }}"}
+  typ: {foreground: "{{colors.secondary.default.hex }}"}
+  range: {foreground: "{{colors.primary_fixed.default.hex }}"}
+
+file_type:
+  image: {foreground: "{{colors.error.default.hex }}"}
+  video: {foreground: "{{colors.primary_container.default.hex }}"}
+  music: {foreground: "{{colors.on_error_container.default.hex}}"}
+  lossless: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+  crypto: {foreground: "{{colors.secondary.default.hex }}"}
+  document: {foreground: "{{colors.tertiary.default.hex }}"}
+  compressed: {foreground: "{{colors.secondary_container.default.hex }}"}
+  temp: {foreground: "{{colors.on_primary.default.hex }}"}
+  compiled: {foreground: "{{colors.inverse_surface.default.hex }}"}
+  build: {foreground: "{{colors.secondary.default.hex }}"}
+  source: {foreground: "{{colors.primary_fixed.default.hex }}"}
+
+punctuation: {foreground: "{{colors.on_background.default.hex }}"}
+date: {foreground: "{{colors.error.default.hex }}"}
+inode: {foreground: "{{colors.outline.default.hex }}"}
+blocks: {foreground: "{{colors.secondary.default.hex }}"}
+header: {foreground: "{{colors.tertiary.default.hex }}"}
+octal: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+flags: {foreground: "{{colors.primary_fixed.default.hex }}"}
+
+symlink_path: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
+control_char: {foreground: "{{colors.inverse_surface.default.hex }}"}
+broken_symlink: {foreground: "{{colors.primary_container.default.hex }}"}
+broken_path_overlay: {foreground: "{{colors.secondary.default.hex }}"}
