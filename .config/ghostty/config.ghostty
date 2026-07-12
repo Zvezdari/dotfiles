@@ -2,7 +2,7 @@
 custom-shader = "~/.config/ghostty/shaders/cursor.frag"
 
 # 可通过 `ghostty +list-themes` 预览主题
-theme = Catppuccin Mocha
+theme = "Matugen"
 
 # 使用 fish 作为登录shell
 command = "fish"

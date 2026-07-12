@@ -7,8 +7,6 @@ alias lcfg "lazygit -g ~/.cfg -w ~"
 alias ls "eza --icons --git-repos-no-status --header"
 alias cat "bat"
 alias ff "fastfetch"
-alias mwin "sudo mount /dev/nvme0n1p1 ~/win-data -t ntfs-3g"
-alias mtag "uv run --with requests --with mutagen python ~/.local/bin/MusicTagger.py"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -26,4 +24,4 @@ starship init fish | source
 eval (batpipe)
 batman --export-env | source
 
-fish_config theme choose catppuccin-mocha --color-theme=dark
+fish_config theme choose matugen
