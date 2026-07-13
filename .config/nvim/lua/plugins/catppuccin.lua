@@ -48,7 +48,6 @@ return {
       vim.api.nvim_create_autocmd('UIEnter', {
         pattern = '*',
         callback = function()
-          vim.cmd('highlight DropbarMenuNormalFloat blend=0')
           vim.cmd('highlight MiniPickNormal blend=0')
           vim.cmd('highlight MiniFilesNormal blend=0')
           vim.cmd('highlight NormalFloat blend=0')

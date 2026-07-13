@@ -60,7 +60,7 @@ km.set('n', '<leader>fr', '<Cmd>Pick oldfiles<CR>', { desc = "Pick recent files"
 km.set('n', '<leader>ff', '<Cmd>Pick files<CR>', { desc = "Pick files" })
 km.set('n', '<leader>fc', '<Cmd>Pick history<CR>', { desc = "Pick command history" })
 km.set('n', '<leader>fg', '<Cmd>Pick registers<CR>', { desc = "Pick registers" })
-km.set('n', '<leader>fh', require('snacks.notifier').show_history, { desc = "Show notify history" })
+km.set('n', '<leader>fh', '<Cmd>lua MiniNotify.show_history()<CR>', { desc = "Show notify history" })
 km.set('n', '<leader>fd', require('snacks.dashboard').open, { desc = "Show dashboard" })
 
 -- buffer
