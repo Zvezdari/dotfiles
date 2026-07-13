@@ -8,7 +8,7 @@ theme = "Matugen"
 command = "fish"
 
 # 背景透明
-background-opacity = 0.5
+background-opacity = 0.1
 
 # 字体设置
 font-family = "Maple Mono NF CN"

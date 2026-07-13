@@ -3,7 +3,6 @@
 	"logo": {
     "type": "sixel",
     "width": 25,
-		// "source": "arch",
 		"padding": {
 			"top": 2,
 			"left": 2,

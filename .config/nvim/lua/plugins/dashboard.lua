@@ -50,7 +50,7 @@ return {
         ]],
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua MiniPick.builtin.files({ tool = 'rg' })" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+          { icon = "󰙅 ", key = "t", desc = "File Tree", action = ":lua MiniFiles.open()" },
           { icon = " ", key = "g", desc = "Find Text", action = ":lua MiniPick.builtin.grep_live()" },
           { icon = " ", key = "r", desc = "Recent Files", action = ":Pick oldfiles" },
           { icon = " ", key = "c", desc = "Config", action = ":Pick config" },

@@ -27,7 +27,6 @@ return {
       -- icon
       { '<leader>fr', icon = icons.get('filetype', 'fzf') },
       { '<leader>fo', icon = { icon = icons.get('filetype', 'neo-tree'), color = "orange" } },
-      { '<leader>;',  icon = icons.get('filetype', 'neo-tree') },
       { '<leader>fg', icon = icons.get('file', '.bashrc') },
     })
   end,

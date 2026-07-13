@@ -62,9 +62,6 @@ return {
       })
       require("transparent").setup({
         extra_groups = {
-          "DropbarMenuNormalFloat",
-          "DropbarMenuFloatBorder",
-
           "MiniPickNormal",
           "MiniPickBorder",
           "MiniPickPrompt",
