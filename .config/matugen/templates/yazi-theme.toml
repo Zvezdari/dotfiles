@@ -318,6 +318,7 @@ files = [
 	{ name = "gulpfile.ts", text = "", fg = "{{colors.on_surface.default.hex}}" },
 	{ name = "hypridle.conf", text = "", fg = "{{colors.on_surface.default.hex}}" },
 	{ name = "hyprland.conf", text = "", fg = "{{colors.on_surface.default.hex}}" },
+	{ name = "hyprland.lua", text = "", fg = "{{colors.on_surface.default.hex}}" },
 	{ name = "hyprlandd.conf", text = "", fg = "{{colors.on_surface.default.hex}}" },
 	{ name = "hyprlock.conf", text = "", fg = "{{colors.on_surface.default.hex}}" },
 	{ name = "hyprpaper.conf", text = "", fg = "{{colors.on_surface.default.hex}}" },
