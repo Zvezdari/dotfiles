@@ -52,7 +52,6 @@ return {
           { icon = " ", key = "f", desc = "Find File", action = ":lua MiniPick.builtin.files({ tool = 'rg' })" },
           { icon = "󰙅 ", key = "t", desc = "File Tree", action = ":lua MiniFiles.open()" },
           { icon = " ", key = "g", desc = "Find Text", action = ":lua MiniPick.builtin.grep_live()" },
-          { icon = " ", key = "r", desc = "Recent Files", action = ":Pick oldfiles" },
           { icon = " ", key = "c", desc = "Config", action = ":Pick config" },
           { icon = " ", key = "s", desc = "Restore Session", section = "session" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },

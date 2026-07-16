@@ -16,9 +16,6 @@ return {
     require('mini.trailspace').setup({})
     vim.g.minitrailspace_disable = true -- disable trailing highlight
 
-    -- require('mini.diff').setup({})
-    -- require('mini.git').setup({})
-    -- require('mini.sessions').setup({})
     require('mini.extra').setup({})
 
     -- 提供 icon 图标
