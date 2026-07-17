@@ -1,10 +1,9 @@
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"logo": {
-    "type": "sixel",
-    "width": 25,
+    "source": "/home/zvezdari/.config/fastfetch/logo.txt",
+    // "type": "small",
 		"padding": {
-			"top": 2,
 			"left": 2,
       "right": 2
 		}
@@ -14,108 +13,57 @@
 	},
 	"modules": [
 		{
-			"type": "title",
-      "key": " ",
-			"keyColor": "cyan"
+			"type": "command",
+      "key": "  USER",
+			"keyColor": "magenta",
+      "text": "echo $USER@$(hostnamectl hostname)"
 		},
-		"break",
 		{
 			"type": "os",
-      "key": "OS",
-			"keyColor": "magenta"
+      "key": "󰣇  OS  ",
+			"keyColor": "magenta",
+      "format": "{name}"
 		},
 		{
-			"type": "kernel",
-			"key": "├─  KER",
-			"format": "{1} {2}",
+			"type": "command",
+			"key": "  KER ",
+      "text": "echo $(uname -r | cut -d- -f1) $(uname -m)",
 			"keyColor": "magenta"
 		},
 		{
 			"type": "packages",
-			"key": "├─  PAK",
+			"key": "  PKG ",
 			"keyColor": "magenta"
 		},
-		{
-			"type": "lm",
-			"key": "╰─󰧨  LMR",
-			"keyColor": "magenta"
-		},
-		// {
-		// 	"type": "theme",
-		// 	"key": "├─󰉼",
-		// 	"keyColor": "magenta"
-		// },
-		// {
-		// 	"type": "icons",
-		// 	"key": "╰─󰀻",
-		// 	"keyColor": "magenta"
-		// },
-		"break",
 		{
 			"type": "wm",
-			"key": "WM",
-			"keyColor": "green"
+			"key": "  WM  ",
+			"keyColor": "magenta",
+      "format": "{1}"
 		},
 		{
 			"type": "terminal",
-			"key": "├─  TER",
-			"keyColor": "green"
-		},
-		{
-			"type": "terminalfont",
-			"key": "├─  FON",
-			"keyColor": "green"
+			"key": "  TERM",
+			"keyColor": "magenta",
+      "format": "{1}"
 		},
 		{
 			"type": "shell",
-			"key": "╰─  SHE",
-			"keyColor": "green"
-		},
-		"break",
-		{
-			"type": "host",
-			"key": "HO",
-			"keyColor": "yellow",
-      "format": "{name}"
+			"key": "  SH  ",
+			"keyColor": "magenta",
+      "format": "{1}"
 		},
 		{
-			"type": "cpu",
-			"key": "├─󰍛  CPU",
-			"keyColor": "yellow",
-      "format": "{name}"
-		},
-		{
-			"type": "gpu",
-			"key": "├─󰘚  GPU",
-			"keyColor": "yellow",
-      "format": "{name}"
-		},
-		{
-			"type": "display",
-			"key": "├─󰍹  MON",
-			"keyColor": "yellow"
-		},
-		// {
-		// 	"type": "wallpaper",
-		// 	"key": "╰─󰸉",
-		// 	"keyColor": "yellow"
-		// },
-		{
-			"type": "memory",
-			"key": "├─  MEM",
-			"keyColor": "yellow"
-		},
-		{
-			"type": "disk",
-			"key": "├─  DIS",
-			"keyColor": "yellow"
+			"type": "terminalfont",
+			"key": "  FONT",
+			"keyColor": "magenta",
+      "format": "{1}"
 		},
 		{
 			"type": "uptime",
-			"key": "╰─󰅐  TIM",
-			"keyColor": "yellow"
+			"key": "󰅐  TIME",
+			"keyColor": "magenta"
 		},
-		"break",
 		{
 			"type": "custom",
 			"format": "  \u001b[1m\u001b[33m󰮯 \u001b[1m\u001b[32m󰊠 \u001b[1m\u001b[31m󰊠 \u001b[1m\u001b[34m󰊠 \u001b[1m\u001b[35m󰊠 \u001b[1m\u001b[36m󰊠 \u001b[1m\u001b[39m󰊠 \u001b[1m\u001b[37m󰊠 "

@@ -22,3 +22,6 @@ shell-integration-features = no-cursor
 # 快捷键设置
 keybind = ctrl+alt+d=scroll_page_down
 keybind = ctrl+alt+u=scroll_page_up
+
+# 滚动条设置
+scrollbar = never
