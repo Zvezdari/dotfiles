@@ -17,7 +17,7 @@
     "tooltip-format-wifi": "󱄙  {essid} ({signalStrength}%)\n\n󰐻  Freq: {frequency}GHz\n  {bandwidthDownBytes}   {bandwidthUpBytes}",
     "tooltip-format-ethernet": "󰈀  {ifname} (Connected)\n  {bandwidthDownBytes}   {bandwidthUpBytes}",
     "tooltip-format-linked": "󱘖 {ifname}: No IP Address",
-    "on-click": "exec ghostty -e nmtui",
+    "on-click": "exec kitty -e nmtui",
     "on-click-right": "nmcli radio wifi $( [ $(nmcli radio wifi) = \"enabled\" ] && echo off || echo on )"
   },
   "bluetooth": {
@@ -30,6 +30,6 @@
     "tooltip-format-connected": "󰐻  {num_connections} Connected:\n{device_enumerate}",
     "tooltip-format-enumerate-connected-battery": "󰂱  {device_alias} (󰠠  {device_battery_percentage}%)",
     "on-click-right": "rfkill toggle bluetooth",
-    "on-click": "exec ghostty -e bluetui"
+    "on-click": "exec kitty -e bluetui"
   }
 }

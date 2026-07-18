@@ -1,7 +1,7 @@
 {
   "custom/systeminfo": {
     "format": "",
-    "on-click": "exec ghostty -e btop"
+    "on-click": "exec kitty -e btop"
   },
   "memory": {
     "interval": 30,

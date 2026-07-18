@@ -8,6 +8,10 @@ output_path = '~/.config/cava/themes/matugen'
 input_path = '~/.config/matugen/templates/theme.yml'
 output_path = '~/.config/eza/theme.yml'
 
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
+
 [templates.fish]
 input_path = '~/.config/matugen/templates/fish.theme'
 output_path = '~/.config/fish/themes/matugen.theme'

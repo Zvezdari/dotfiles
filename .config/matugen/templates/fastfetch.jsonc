@@ -1,0 +1,84 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+    "source": "/home/zvezdari/.config/fastfetch/logo.txt",
+		"padding": {
+			"left": 2,
+      "right": 2
+		},
+    "color": {
+      "1": "{{colors.secondary.default.hex | lighten: 8.0 }}",
+      "2": "{{colors.secondary.default.hex | lighten: 7.0 }}",
+      "3": "{{colors.secondary.default.hex | lighten: 6.0 }}",
+      "4": "{{colors.secondary.default.hex | lighten: 5.0 }}",
+      "5": "{{colors.secondary.default.hex | lighten: 4.0 }}",
+      "6": "{{colors.secondary.default.hex | lighten: 3.0 }}",
+      "7": "{{colors.secondary.default.hex | lighten: 2.0 }}",
+      "8": "{{colors.secondary.default.hex | lighten: 1.0 }}"
+    }
+	},
+	"display": {
+		"separator": "  ",
+    "color": {
+      "output": "{{colors.on_surface.default.hex}}"
+    }
+	},
+	"modules": [
+		{
+			"type": "command",
+      "key": "  USER",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 8.0 }}",
+      "text": "echo $USER@$(hostnamectl hostname)"
+		},
+		{
+			"type": "os",
+      "key": "󰣇  OS  ",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 7.0 }}",
+      "format": "{name}"
+		},
+		{
+			"type": "command",
+			"key": "  KER ",
+      "text": "echo $(uname -r | cut -d- -f1) $(uname -m)",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 6.0 }}"
+		},
+		{
+			"type": "packages",
+			"key": "  PKG ",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 5.0 }}"
+		},
+		{
+			"type": "wm",
+			"key": "  WM  ",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 4.0 }}",
+      "format": "{1}"
+		},
+		{
+			"type": "terminal",
+			"key": "  TERM",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 3.0 }}",
+      "format": "{1}"
+		},
+		{
+			"type": "shell",
+			"key": "  SH  ",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 2.0 }}",
+      "format": "{1}"
+		},
+		{
+			"type": "terminalfont",
+			"key": "  FONT",
+			"keyColor": "{{colors.secondary.default.hex | lighten: 1.0 }}",
+      "format": "{1}"
+		},
+		{
+			"type": "uptime",
+			"key": "󰅐  TIME",
+			"keyColor": "{{colors.secondary.default.hex}}"
+		},
+		{
+			"type": "custom",
+			"format": "  \u001b[1m\u001b[33m󰮯 \u001b[1m\u001b[32m󰊠 \u001b[1m\u001b[31m󰊠 \u001b[1m\u001b[34m󰊠 \u001b[1m\u001b[35m󰊠 \u001b[1m\u001b[36m󰊠 \u001b[1m\u001b[39m󰊠 \u001b[1m\u001b[37m󰊠 "
+		}
+	]
+}

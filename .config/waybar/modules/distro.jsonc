@@ -6,12 +6,12 @@
   },
   "custom/terminal": {
     "format": "󰊠",
-    "on-click": "ghostty",
+    "on-click": "kitty",
     "tooltip": false
   },
   "custom/code": {
     "format": "",
-    "on-click": "exec ghostty -e nvim",
+    "on-click": "exec kitty -e nvim",
     "tooltip": false
   },
   "custom/obsidian": {
@@ -31,7 +31,7 @@
   },
   "custom/spotify": {
     "format": "",
-    "on-click": "exec ghostty -e rmpc",
+    "on-click": "exec kitty -e rmpc",
     "tooltip": false
   },
   "custom/browser": {

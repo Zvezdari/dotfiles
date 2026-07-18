@@ -15,6 +15,6 @@
 	"noise_reduction": 0.03,
 	"input_delay": 1,
 	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-  "on-click": "exec ghostty -e rmpc"
+  "on-click": "exec kitty -e rmpc"
 }
 }
