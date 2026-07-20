@@ -21,13 +21,21 @@ patch:
     # 翻页
     - { when: has_menu, accept: Control+i, send: Page_Up }
     - { when: has_menu, accept: Control+o, send: Page_Down }
-    # 清除
+    # 清除自造词
     - { when: has_menu, accept: Control+k, send: Shift+Delete }
-    # 清空
-    - { when: composing, accept: Control+l, send: Escape }
-    # 选词
+    # 清空输入内容
+    - { when: composing, accept: Control+u, send: Escape }
+    # 删除输出字符
+    - { when: composing, accept: Control+h, send: BackSpace }
+    - { when: composing, accept: Control+d, send: Delete }
+    # 移动到行首行尾
+    - { when: composing, accept: Control+a, send: Home }
+    - { when: composing, accept: Control+e, send: End }
+    # 方向移动
     - { when: composing, accept: Control+p, send: Up }
     - { when: composing, accept: Control+n, send: Down }
+    - { when: composing, accept: Control+f, send: Right }
+    - { when: composing, accept: Control+b, send: Left }
     # 将小键盘 0~9 . 映射到主键盘，数字金额大写的 Lua 如 R1234.5678 可使用小键盘输入
     - {accept: KP_0, send: 0, when: composing}
     - {accept: KP_1, send: 1, when: composing}

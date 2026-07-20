@@ -35,9 +35,31 @@ return {
     -- mainly used for handling color-preview problem in @defrine-color in css file
     require('mini.hipatterns').setup({
       highlighters = {
+        fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+        hack  = { pattern = '%f[%w]()HACK()%f[%W]',  group = 'MiniHipatternsHack'  },
         todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo'  },
+        note  = { pattern = '%f[%w]()NOTE()%f[%W]',  group = 'MiniHipatternsNote'  },
 
         hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
+        rgb_with_color = {
+          pattern = 'rgb%(%s*%d+%s*,%s*%d+%s*,%s*%d+%s*%)',
+          group = function(_, match)
+            -- 提取三个颜色值
+            local r, g, b = match:match('rgb%(%s*(%d+)%s*,%s*(%d+)%s*,%s*(%d+)%s*%)')
+            -- local r, g, b = 255, 255, 255
+
+            -- 转换为数字并限制范围
+            r = math.max(0, math.min(255, tonumber(r) or 0))
+            g = math.max(0, math.min(255, tonumber(g) or 0))
+            b = math.max(0, math.min(255, tonumber(b) or 0))
+
+            -- 转换为十六进制颜色代码
+            local hex = string.format('#%02x%02x%02x', r, g, b)
+
+            -- 用提取的颜色创建高亮组
+            return require('mini.hipatterns').compute_hex_color_group(hex, 'bg')
+          end,
+        },
       }
     })
 

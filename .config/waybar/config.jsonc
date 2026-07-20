@@ -34,10 +34,7 @@
     "idle_inhibitor"
   ],
   "modules-right": [
-    "group/audio",
-    "group/light",
     "group/connections",
-    "group/power",
     "battery",
     "clock",
     "group/tray-group"

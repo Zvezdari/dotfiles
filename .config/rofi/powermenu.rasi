@@ -1,0 +1,114 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+@import           "colors.rasi"
+
+/*****----- Global Properties -----*****/
+* {
+    prompt-font:                 "Bookerly Bold Italic 48";
+    textbox-font:                "Adwaita Sans Medium 12";
+    element-text-font:           "feather 48";
+
+    background-normal:           white/5%;
+    background-selected:         white/15%;
+    foreground-normal:           white;
+    foreground-selected:         white;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1000px;
+    border-radius:               50px;
+    background-color:            var(background);
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     50px;
+    margin:                      50px;
+    background-color:            transparent;
+    children:                    [ "dummy", "inputbar", "listview", "message", "dummy" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    background-color:            transparent;
+    children:                    [ "dummy", "prompt", "dummy"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+prompt {
+    enabled:                     true;
+    font:                        var(prompt-font);
+    background-color:            transparent;
+    text-color:                  var(foreground-normal);
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px 300px;
+    padding:                     12px;
+    border-radius:               12px;
+    background-color:            var(background-normal);
+    text-color:                  var(foreground-normal);
+}
+textbox {
+    font:                        var(textbox-font);
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    expand:                      false;
+    columns:                     5;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     25px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     35px 10px 35px 0px;
+    border-radius:               60px;
+    background-color:            var(background-normal);
+    text-color:                  var(foreground-normal);
+    cursor:                      pointer;
+}
+element-text {
+    font:                        var(element-text-font);
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            var(background-selected);
+    text-color:                  var(foreground-selected);
+}

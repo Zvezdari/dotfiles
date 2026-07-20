@@ -1,0 +1,102 @@
+@import                 "colors.rasi"
+* {
+    font:               "Maple Mono NF CN Bold Italic 10";
+    border:             0;
+    margin:             0;
+    padding:            0;
+    spacing:            0;
+}
+
+window {
+    background-color:   var(background);
+    border:             1px solid;
+    border-color:       var(border-color);
+    border-radius:      25px;
+    padding:            10px;
+    width:              450px;
+    location:           south;
+    anchor:             south;
+    fixed-height:       false;
+    y-offset:           -40px;
+}
+
+mainbox {
+    background-color:   transparent;
+    spacing:            6px;
+    padding:            0;
+    children:           [ listview, inputbar ];
+}
+
+inputbar {
+    background-color:   transparent;
+    border:             2px solid;
+    border-color:       var(selected);
+    border-radius:      20px;
+    padding:            8px 16px;
+    spacing:            8px;
+    children:           [ prompt, entry ];
+}
+
+prompt {
+    background-color:   transparent;
+    text-color:         var(foreground-alt);
+    font:               var(font);
+    vertical-align:     0.5;
+}
+
+entry {
+    background-color:   transparent;
+    text-color:         var(text);
+    placeholder:        "Search";
+    placeholder-color:  var(text);
+    vertical-align:     0.5;
+    expand:             true;
+}
+
+listview {
+    background-color:   transparent;
+    spacing:            2px;
+    padding:            4px 0 0 0;
+    lines:              8;
+    cycle:              false;
+    dynamic:            true;
+    scrollbar:          false;
+    fixed-height:       false;
+    reverse:            true;
+}
+element {
+    background-color:   transparent;
+    border-radius:      20px;
+    padding:            6px 16px;
+    spacing:            12px;
+    orientation:        horizontal;
+    children:           [ element-icon, element-text ];
+}
+
+element normal.normal {
+    background-color:   transparent;
+    text-color:         var(foreground);
+}
+
+element selected.normal {
+    background-color:   var(selected);
+    text-color:         var(text-alt);
+}
+
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         var(foreground);
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               26px;
+    vertical-align:     0.5;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    vertical-align:     0.5;
+    expand:             true;
+}

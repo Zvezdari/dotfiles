@@ -8,7 +8,7 @@
 }
 
 #workspaces button {
-  padding: 0 5px;
+  padding: 2px 5px;
   margin: 0px 2px;
   border-radius: 24px;
   color: @tertiary;
@@ -16,7 +16,7 @@
 }
 
 #workspaces button.active {
-  padding: 0px 13px 0px 13px;
+  padding: 0px 8px 0px 8px;
   background-color: @primary;
   color: @on_primary;
   min-width: 25px;
