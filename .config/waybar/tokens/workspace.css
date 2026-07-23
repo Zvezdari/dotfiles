@@ -8,18 +8,11 @@
 }
 
 #workspaces button {
-  padding: 2px 5px;
+  padding: 0px 2px;
   margin: 0px 2px;
   border-radius: 24px;
-  color: @tertiary;
+  background-color: @secondary;
   transition: all 0.2s ease-in-out;
-}
-
-#workspaces button.active {
-  padding: 0px 8px 0px 8px;
-  background-color: @primary;
-  color: @on_primary;
-  min-width: 25px;
 }
 
 #workspaces button.special {
@@ -27,7 +20,14 @@
 }
 
 #workspaces button.empty {
+  background-color: @outline_variant;
+}
+
+#workspaces button.active {
+  padding: 0px 4px;
+  background-color: @primary;
   color: @on_primary;
+  min-width: 25px;
 }
 
 #workspaces button:hover {

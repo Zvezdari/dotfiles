@@ -5,7 +5,7 @@ input_path = '~/.config/matugen/templates/cava-colors.ini'
 output_path = '~/.config/cava/themes/matugen'
 
 [templates.eza]
-input_path = '~/.config/matugen/templates/theme.yml'
+input_path = '~/.config/matugen/templates/eza.yml'
 output_path = '~/.config/eza/theme.yml'
 
 [templates.fastfetch]
@@ -49,7 +49,7 @@ input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/colors.css'
+input_path = '~/.config/matugen/templates/waybar-colors.css'
 output_path = '~/.config/waybar/tokens/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 

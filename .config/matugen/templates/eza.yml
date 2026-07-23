@@ -77,13 +77,13 @@ security_context:
 
 file_type:
   image: {foreground: "{{colors.error.default.hex }}"}
-  video: {foreground: "{{colors.primary_container.default.hex }}"}
+  video: {foreground: "{{colors.tertiary.default.hex }}"}
   music: {foreground: "{{colors.on_error_container.default.hex}}"}
   lossless: {foreground: "{{colors.on_tertiary_container.default.hex }}"}
   crypto: {foreground: "{{colors.secondary.default.hex }}"}
   document: {foreground: "{{colors.tertiary.default.hex }}"}
-  compressed: {foreground: "{{colors.secondary_container.default.hex }}"}
-  temp: {foreground: "{{colors.on_primary.default.hex }}"}
+  compressed: {foreground: "{{colors.secondary_fixed_dim.default.hex }}"}
+  temp: {foreground: "{{colors.primary_fixed_dim.default.hex }}"}
   compiled: {foreground: "{{colors.inverse_surface.default.hex }}"}
   build: {foreground: "{{colors.secondary.default.hex }}"}
   source: {foreground: "{{colors.primary_fixed.default.hex }}"}

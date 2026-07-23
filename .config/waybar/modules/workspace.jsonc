@@ -1,12 +1,10 @@
 {
   "hyprland/workspaces": {
-    // "format": "{icon} {windows}",
+    "format": "",
     "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})'",
     "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})'",
     "persistent-workspaces": {
       "*": 5
     }
-    // "show-special": true,
-    // "all-outputs": true
   }
 }
