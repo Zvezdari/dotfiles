@@ -36,6 +36,10 @@ input_path = '~/.config/matugen/templates/mako-colors'
 output_path = '~/.config/mako/mako-colors'
 post_hook = 'makoctl reload'
 
+[templates.rmpc]
+input_path = '~/.config/matugen/templates/rmpc.ron'
+output_path = '~/.config/rmpc/themes/matugen.ron'
+
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi.rasi'
 output_path = '~/.config/rofi/colors.rasi'

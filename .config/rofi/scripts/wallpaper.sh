@@ -26,4 +26,8 @@ if [ -n "$SELECTED" ]; then
     awww img "$WALL_DIR/$SELECTED" \
         --transition-type grow \
         --transition-duration 2
+    matugen image "$WALL_DIR/$SELECTED" \
+        --source-color-index 1 || \
+    matugen image "$WALL_DIR/$SELECTED" \
+        --source-color-index 0
 fi

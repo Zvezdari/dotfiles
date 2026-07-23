@@ -7,7 +7,7 @@
     scrolloff: 2,
     max_fps: 60,
     wrap_navigation: true,
-    theme: "nord",
+    theme: "matugen",
     cache_dir: Some("/tmp/rmpc/cache"),
     browser_song_sort: [Title, Artist, Disc, Track],
     lyrics_dir: "~/.lyrics",
