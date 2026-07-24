@@ -4,6 +4,10 @@
 input_path = '~/.config/matugen/templates/cava-colors.ini'
 output_path = '~/.config/cava/themes/matugen'
 
+[templates.clipse]
+input_path = '~/.config/matugen/templates/clipse_theme.json'
+output_path = '~/.config/clipse/custom_theme.json'
+
 [templates.eza]
 input_path = '~/.config/matugen/templates/eza.yml'
 output_path = '~/.config/eza/theme.yml'
